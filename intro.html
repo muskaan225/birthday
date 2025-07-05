@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Message</title>
+  <style>
+    .birthday-message {
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .birthday-message h1 {
+      font-size: 60px;
+      font-weight: bold;
+      color: #2d2c2c;
+    }
+
+    .birthday-message p {
+      font-size: 28px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .click-button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #181818;
+      color: rgb(239, 227, 227);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .click-button:hover {
+      background-color: #ebefef;
+      color: #000;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .modal-content p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .modal-buttons {
+      margin-top: 20px;
+    }
+
+    .modal-buttons button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .ok-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .close-btn {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+ <a href="dob.html"></a>
+
+
+  <div class="birthday-message">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <p>To the bestest woman of our life
+        <br><br>
+        <strong>BUJJANAGARI SHAILAJA RANI</strong>
+        <br><br>
+        ❤️ ❤️
+    </p>
+    <button class="click-button" onclick="showSurprise()">Click Here</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="surpriseModal" class="modal">
+    <div class="modal-content">
+      <p>Wishing you joy, love, and laughter today and always! 💐</p>
+      <div class="modal-buttons">
+        <button class="ok-btn" onclick="goToNextPage()">ThankYou</button>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('surpriseModal').style.display = 'block';
+    }
+
+    function goToNextPage() {
+      window.location.href = "dob.html";
+    }
+
+    function closeModal() {
+      document.getElementById('surpriseModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

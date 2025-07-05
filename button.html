@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Info Display</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background-color: #fcffff;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .button-container {
+      margin-bottom: 30px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: #f9f7f7;
+      color: rgb(11, 10, 10);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f1f0f0;
+    }
+
+    #info {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: bold;
+      color: #333;
+      padding: 30px;
+      background-color: #fcfbfb;
+      border: 2px solid #fefefe;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      white-space: pre-line;
+      font-size: 20px;
+    }
+
+    .greeting {
+      margin-top: 30px;
+      font-size: 50px;
+      font-weight: bold;
+      color: #191818;
+    }
+
+    #info img {
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="greeting">💖 Birthday Wishes 💖</h2>
+
+  <div class="button-container">
+    <button onclick="showInfo('info1')">Laxmi Prasad</button>
+    <button onclick="showInfo('info2')">Padmavathi</button>
+    <button onclick="showInfo('info3')">Srinithya</button>
+    <button onclick="showInfo('info4')">Srinidhi</button>
+  </div>
+
+  <strong><div id="info">CLICK</div></strong>
+<a href="photo.html">
+      <button type="button">NextPage</button>
+    </a>
+    <a href="dob.html">
+      <button type="button">Back</button>
+    </a>
+
+  <script>
+    function showInfo(buttonId) {
+      const infoText = {
+        info1: `
+          <img src="pappa.jpeg" height="300px" width="200px"/>
+          <div>
+            You are not only my wife, but also the part of my life, my world, my strength. <br><br>
+            You were there with me every time during my low. I may mock you many times but it is not from my heart — just for laughter moments in our lives. <br><br>
+            You are the best mentor for our children and also the light of our family. <br><br>
+            I wish a warm and cheerful greeting to the light of my tunnel ❤️🌠
+          </div>
+        `,
+        info2: `
+         <img src="padmavathi.jpeg" height="300px" width="200px"/>
+          <div>
+
+          You came into our family as a daughter-in-law, but embraced as a daughter. <br><br>
+          Your love, patience, and warmth have filled our home with joy. <br><br>
+          I admire the way you care for everyone, how you hold the family and external work together with such grace. <br><br>
+          Happy Birthday to the SUNSHINE of my Son 🫂✨
+          </div>
+        `,
+        info3: `
+        <img src="srinithya.jpeg"  height="300px" width="200px"/>
+          <div>
+          Happy Birthday LUUUUUU 🥳💘<br><br>
+          I know you like tablet 😆<br>
+          Irritating you will always be the best memory. <br><br>
+          Your concern towards your younger and little princess is priceless — it cannot be compared to anything in the world.
+          </div>
+        `,
+        info4: `
+        <img src="srinidhi1.jpeg" height="300px" width="200px"/>
+          <div>
+          Happy Birthday to the GUARDIAN OF MY LIFE'S JOURNEY 💝♾️<br><br>
+          Even though you raise your voice at family,<br>
+          at the end of the day your concern never fades.
+          </div>
+        `
+      };
+
+      document.getElementById("info").innerHTML = infoText[buttonId];
+    }
+  </script>
+
+</body>
+</html>
